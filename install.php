@@ -9,7 +9,7 @@ if(!$result['install']){
     throw new AppExeption('Приложение не установлено', $logger);
 }
 
-$handler = 'https://' . $_SERVER['SERVER_NAME'] . '/b24.app.sort/index.php'; 
+$handler = 'https://' . $_SERVER['SERVER_NAME'] . ROOT . '/index.php'; 
 
 $result = CRestCompanyApp::call('userfieldtype.add', [
     'USER_TYPE_ID' =>  'select_company',
